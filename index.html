@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen</title>
+  <meta name="description" content="Camping ved foten av Nigardsbreen. Hytter, bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret. Ring +47 57 68 31 35.">
+  <meta property="og:title" content="Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen">
+  <meta property="og:description" content="Camping ved foten av Nigardsbreen. Hytter, bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Bilder/Nigardsbreen-camping-e1718191783292.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400;1,9..144,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a2e1a;
+      --accent: #4a9b8f;
+      --bg: #f7f9f7;
+      --text: #1a1a1a;
+      --light: #ffffff;
+      --muted: rgba(26,26,26,0.6);
+      --border: rgba(26,46,26,0.1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 700; line-height: 1.2; }
+
+    section { scroll-margin-top: 64px; }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* HEADER */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247,249,247,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s ease;
+    }
+    #header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-desktop { display: none; align-items: center; gap: 28px; }
+    .nav-desktop a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+    .nav-desktop a:hover { opacity: 1; }
+
+    .lang-toggle-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+    .lang-label {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1;
+    }
+    .lang-flags {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      min-width: 178px;
+      justify-content: center;
+    }
+    .flag-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 1.05rem;
+      padding: 1px 2px;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      opacity: 0.38;
+      transition: opacity 0.2s, background 0.2s, transform 0.15s;
+      transform-origin: center center;
+      line-height: 1;
+      box-sizing: border-box;
+    }
+    .flag-btn:focus-visible {
+      outline: 2px solid rgba(74,155,143,0.9);
+      outline-offset: 2px;
+    }
+    .flag-btn.active {
+      opacity: 1;
+      background: rgba(74,155,143,0.14);
+      box-shadow: inset 0 0 0 1px rgba(74,155,143,0.24);
+      transform: none;
+    }
+    .flag-btn:hover:not(.active) { opacity: 0.7; }
+
+    .btn-book-header {
+      display: none;
+      padding: 9px 18px;
+      background: var(--accent);
+      color: var(--light);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-book-header:hover { background: #3d8a7f; transform: translateY(-1px); }
+
+    .hamburger {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 64px 0 0 0;
+      background: rgba(247,249,247,0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+      padding: 12px 24px;
+    }
+    .mobile-menu .btn-menu-book {
+      margin-top: 20px;
+      padding: 14px 36px;
+      background: var(--accent);
+      color: var(--light);
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 767px) {
+      .header-inner { justify-content: flex-start; }
+      .header-right { flex: 1; justify-content: flex-end; }
+    }
+    @media (min-width: 768px) {
+      .nav-desktop { display: flex; }
+      .btn-book-header { display: block; }
+      .hamburger { display: none; }
+    }
+
+    /* HERO */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('Bilder/Nigardsbreen-camping-e1718191783292.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,20,10,0.48);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--light);
+      padding: 0 24px;
+      max-width: 720px;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      opacity: 0.82;
+      margin-bottom: 16px;
+    }
+    .hero-h1 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(2.4rem, 8vw, 4.2rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+      line-height: 1.12;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .hero-sub {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      opacity: 0.9;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .btn-hero {
+      display: inline-block;
+      padding: 15px 34px;
+      background: var(--accent);
+      color: var(--light);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-hero:hover { background: #3d8a7f; transform: translateY(-2px); }
+    .hero-secondary {
+      display: block;
+      margin-top: 18px;
+      font-size: 0.88rem;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+    .hero-secondary:hover { opacity: 1; }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .scroll-hint-inner {
+      width: 24px;
+      height: 38px;
+      border: 2px solid rgba(255,255,255,0.45);
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 6px;
+    }
+    .scroll-hint-dot {
+      width: 4px;
+      height: 8px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 2px;
+      animation: scrollDot 1.9s ease infinite;
+    }
+    @keyframes scrollDot {
+      0%   { transform: translateY(0); opacity: 1; }
+      75%  { transform: translateY(12px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-hint-dot { animation: none; }
+    }
+
+    /* NÆRLEIK STRIP */
+    #naerleik {
+      background: var(--primary);
+      padding: 48px 24px;
+    }
+    .naerleik-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      text-align: center;
+    }
+    .naerleik-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .naerleik-icon { font-size: 1.5rem; margin-bottom: 4px; }
+    .naerleik-num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .naerleik-label { font-size: 0.9rem; color: rgba(255,255,255,0.82); font-weight: 500; }
+
+    @media (min-width: 580px) {
+      .naerleik-inner { flex-direction: row; justify-content: center; gap: 64px; }
+    }
+
+    /* OM OSS */
+    #om-oss { background: var(--bg); padding: 80px 24px; }
+    .om-oss-inner { max-width: 660px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .section-h2 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      color: var(--primary);
+      margin-bottom: 28px;
+    }
+    .om-oss-text {
+      border-left: 3px solid var(--accent);
+      padding-left: 22px;
+    }
+    .om-oss-text p {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.72;
+      margin-bottom: 14px;
+    }
+    .om-oss-text p:last-child { margin-bottom: 0; }
+    .om-note {
+      font-size: 0.875rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* OVERNATTING */
+    #overnatting { background: var(--primary); padding: 80px 24px; }
+    .overnatting-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label-light { color: rgba(74,155,143,0.9); }
+    .section-h2-light {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      color: var(--light);
+      margin-bottom: 28px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 24px 18px;
+      color: var(--light);
+      transition: background 0.22s;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .card:hover { background: rgba(255,255,255,0.13); }
+    .card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: var(--light);
+      overflow-wrap: break-word;
+    }
+    .card p { font-size: 0.875rem; color: rgba(255,255,255,0.72); line-height: 1.5; overflow-wrap: break-word; }
+
+    .overnatting-cta { text-align: center; margin-top: 44px; }
+    .btn-accent {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: var(--light);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-accent:hover { background: #3d8a7f; transform: translateY(-2px); }
+
+    @media (min-width: 768px) {
+      .cards-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* FASILITETER */
+    #fasiliteter { background: var(--bg); padding: 80px 24px; }
+    .fasiliteter-inner { max-width: 800px; margin: 0 auto; }
+    .facility-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 600px) {
+      .facility-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .facility-item { display: flex; align-items: flex-start; gap: 12px; }
+    .facility-check {
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .facility-check svg {
+      width: 12px;
+      height: 12px;
+      stroke: #fff;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .facility-item p { font-size: 0.95rem; color: var(--text); line-height: 1.45; }
+
+    /* GALLERI */
+    #galleri { background: #0f1f0f; padding: 80px 24px; }
+    .gallery-inner { max-width: 1100px; margin: 0 auto; }
+    .gallery-grid { margin-top: 28px; display: grid; gap: 12px; }
+    .gallery-top {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    .gallery-top:hover { transform: scale(1.03); }
+    .gallery-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .gallery-row img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    .gallery-row img:hover { transform: scale(1.03); }
+    .gallery-note {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.3);
+      font-style: italic;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-top:hover,
+      .gallery-row img:hover { transform: none; }
+    }
+    @media (min-width: 768px) {
+      .gallery-top { height: 420px; }
+      .gallery-row img { height: 280px; }
+    }
+
+    /* KART OG KONTAKT */
+    #kontakt { background: var(--bg); padding: 80px 24px; }
+    .kontakt-inner { max-width: 1100px; margin: 0 auto; }
+    .kontakt-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    @media (min-width: 768px) {
+      .kontakt-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 20px; }
+    .contact-row { display: flex; align-items: flex-start; gap: 12px; }
+    .contact-icon { font-size: 1.15rem; line-height: 1.5; min-width: 24px; }
+    .contact-row a, .contact-row p {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .contact-row a:hover { color: var(--accent); text-decoration: underline; }
+    .contact-season { font-size: 0.875rem; color: var(--muted); font-style: italic; }
+
+    /* FOOTER */
+    #footer {
+      background: var(--primary);
+      padding: 52px 24px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--light);
+      margin-bottom: 18px;
+    }
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .footer-contact a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--light); }
+    .footer-credit {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.25);
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .footer-credit a {
+      color: var(--accent);
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-credit a:hover { color: #6dbfb3; }
+    .footer-credit-logo {
+      height: 22px;
+      width: auto;
+      opacity: 0.35;
+      border-radius: 3px;
+      transition: opacity 0.2s;
+    }
+    .footer-credit a:hover .footer-credit-logo { opacity: 0.65; }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.38);
+      margin-top: 6px;
+    }
+
+    /* BREHEIMSENTERET */
+    #breheimsenteret { background: var(--primary); padding: 80px 24px; }
+    .bhs-inner { max-width: 1100px; margin: 0 auto; }
+    .bhs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 8px;
+    }
+    @media (min-width: 768px) {
+      .bhs-grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch; }
+    }
+    .bhs-img-wrap { border-radius: 10px; overflow: hidden; }
+    .bhs-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      .bhs-img { height: 100%; min-height: 340px; }
+    }
+    .bhs-content { display: flex; flex-direction: column; gap: 28px; }
+    .bhs-text p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.72;
+      margin-bottom: 22px;
+    }
+    .bhs-link {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      transition: opacity 0.2s;
+    }
+    .bhs-link:hover { opacity: 0.75; }
+    .bhs-list { display: flex; flex-direction: column; gap: 16px; }
+    .bhs-item { display: flex; align-items: flex-start; gap: 14px; }
+    .bhs-dot {
+      width: 5px;
+      height: 5px;
+      min-width: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 10px;
+    }
+    .bhs-item p { font-size: 0.95rem; color: rgba(255,255,255,0.78); line-height: 1.5; }
+
+    /* MOBILE FLOATING BUTTONS */
+    .float-btn {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+    }
+    .float-btn:hover { transform: translateY(-3px); }
+    .float-phone { left: 24px; background: var(--primary); color: var(--light); font-size: 1.3rem; }
+    .float-book { right: 24px; background: var(--accent); color: var(--light); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em; }
+    @media (max-width: 767px) {
+      .float-btn { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">Nigardsbreen Camping</a>
+    <div class="header-right">
+      <nav class="nav-desktop">
+        <a href="#overnatting" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</a>
+        <a href="#fasiliteter" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</a>
+        <a href="#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
+        <a href="#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
+        <a href="#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
+      </nav>
+      <div class="lang-toggle-wrap">
+        <span class="lang-label" data-no="Vel språk" data-en="Choose language" data-de="Sprache wählen">Vel språk</span>
+        <div class="lang-flags" role="group" aria-label="Select language">
+          <button class="flag-btn active" id="btn-no" onclick="setLang('no')" title="Norsk">🇳🇴</button>
+          <button class="flag-btn" id="btn-en" onclick="setLang('en')" title="English">🇬🇧</button>
+          <button class="flag-btn" id="btn-de" onclick="setLang('de')" title="Deutsch">🇩🇪</button>
+        </div>
+      </div>
+      <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+         class="btn-book-header"
+         data-no="Book opphald"
+         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
+         target="_blank" rel="noopener">Book opphald</a>
+      <button class="hamburger" id="hamburger" aria-label="Opne meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobile-menu" aria-label="Hovudmeny">
+  <a href="#overnatting" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</a>
+  <a href="#fasiliteter" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</a>
+  <a href="#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
+  <a href="#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
+  <a href="#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
+  <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+     class="btn-menu-book"
+     data-no="Book opphald"
+     data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
+     target="_blank" rel="noopener">Book opphald</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-no="Jostedalen · Vestland · Noreg" data-en="Jostedalen · Vestland · Norway" data-de="Jostedalen · Vestland · Norwegen" data-es="Jostedalen · Vestland · Noruega" data-fr="Jostedalen · Vestland · Norvège">Jostedalen · Vestland · Noreg</p>
+    <h1 class="hero-h1" data-no="Sov ved foten av breen." data-en="Sleep at the foot of the glacier." data-de="Schlafen Sie am Fuß des Gletschers." data-es="Duerme a los pies del glaciar." data-fr="Dormez au pied du glacier.">Sov ved foten av breen.</h1>
+    <p class="hero-sub" data-no="Nigardsbreen Camping — 500 meter frå Breheimsenteret, midt i hjartet av Jostedalen." data-en="Nigardsbreen Camping — 500 metres from Breheimsenteret, in the heart of Jostedalen." data-de="Nigardsbreen Camping — 500 Meter vom Breheimsenteret, im Herzen von Jostedalen." data-es="Nigardsbreen Camping — a 500 metros de Breheimsenteret, en el corazón de Jostedalen." data-fr="Nigardsbreen Camping — à 500 mètres du Breheimsenteret, au cœur de Jostedalen.">Nigardsbreen Camping — 500 meter frå Breheimsenteret, midt i hjartet av Jostedalen.</p>
+
+    <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+       class="btn-hero"
+       data-no="Book opphald"
+       data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
+       target="_blank" rel="noopener">Book opphald</a>
+    <a href="#overnatting" class="hero-secondary" data-no="Sjå kva vi tilbyr ↓" data-en="See what we offer ↓" data-de="Unser Angebot entdecken ↓" data-es="Ver lo que ofrecemos ↓" data-fr="Voir ce que nous offrons ↓">Sjå kva vi tilbyr ↓</a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint-inner"><div class="scroll-hint-dot"></div></div>
+  </div>
+</section>
+
+<!-- NÆRLEIK STRIP -->
+<section id="naerleik" aria-label="Avstandar">
+  <div class="naerleik-inner">
+    <div class="naerleik-item reveal">
+      <div class="naerleik-num" data-count="500">500</div>
+      <div class="naerleik-label" data-no="m — Breheimsenteret" data-en="m — Breheimsenteret" data-de="m — Breheimsenteret" data-es="m — Breheimsenteret" data-fr="m — Breheimsenteret">m — Breheimsenteret</div>
+    </div>
+    <div class="naerleik-item reveal" style="transition-delay:80ms">
+      <div class="naerleik-num" data-count="3">3</div>
+      <div class="naerleik-label" data-no="km — Nigardsbreen parkering" data-en="km — Nigardsbreen car park" data-de="km — Parkplatz Nigardsbreen" data-es="km — Aparcamiento Nigardsbreen" data-fr="km — Parking Nigardsbreen">km — Nigardsbreen parkering</div>
+    </div>
+    <div class="naerleik-item reveal" style="transition-delay:160ms">
+      <div class="naerleik-num" style="font-size:1.4rem" data-no="Rett ved" data-en="Right by" data-de="Direkt am" data-es="Junto al" data-fr="Juste à côté du">Rett ved</div>
+      <div class="naerleik-label" data-no="Nigardsbreen isbre" data-en="Nigardsbreen Glacier" data-de="Gletscher Nigardsbreen" data-es="Glaciar Nigardsbreen" data-fr="Glacier Nigardsbreen">Nigardsbreen isbre</div>
+    </div>
+  </div>
+</section>
+
+<!-- OM OSS -->
+<section id="om-oss" aria-label="Om campingen">
+  <div class="om-oss-inner">
+    <p class="section-label reveal" data-no="Om campingen" data-en="About the campsite" data-de="Über den Campingplatz" data-es="Sobre el camping" data-fr="À propos du camping">Om campingen</p>
+    <h2 class="section-h2 reveal" data-no="Midt i norsk fjellnatur" data-en="In the heart of Norwegian mountain nature" data-de="Mitten in norwegischer Berglandschaft" data-es="En plena naturaleza de montaña noruega" data-fr="Au cœur de la nature montagnarde norvégienne">Midt i norsk fjellnatur</h2>
+    <div class="om-oss-text reveal">
+      <p data-no="God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på."
+         data-en="A great campsite at the foot of Nigardsbreen, perfect for glacier hikes or walks into the valleys surrounding Jostedalsbreen National Park. 500 metres from Breheimsenteret — right in the heart of it all." data-de="Ein großartiger Campingplatz am Fuß des Nigardsbreen, ideal für Gletschertouren oder Wanderungen durch die Täler des Jostedalsbreen-Nationalparks. 500 Meter vom Breheimsenteret — mitten im Besten, was die Natur zu bieten hat." data-es="Un excelente camping al pie del Nigardsbreen, perfecto para excursiones al glaciar o por los valles del Parque Nacional Jostedalsbreen. 500 metros del Breheimsenteret — en el corazón de todo." data-fr="Un excellent camping au pied du Nigardsbreen, idéal pour des randonnées sur le glacier ou dans les vallées du parc national du Jostedalsbreen. À 500 mètres du Breheimsenteret — au cœur de ce que la nature a de mieux à offrir.">God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OVERNATTING -->
+<section id="overnatting" aria-label="Overnatting">
+  <div class="overnatting-inner">
+    <p class="section-label section-label-light reveal" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</p>
+    <h2 class="section-h2-light reveal" data-no="Vel ditt opphald" data-en="Choose your stay" data-de="Wählen Sie Ihren Aufenthalt" data-es="Elige tu estancia" data-fr="Choisissez votre séjour">Vel ditt opphald</h2>
+    <div class="cards-grid">
+      <div class="card reveal">
+        <h3 data-no="Hytte" data-en="Cabin" data-de="Hütte" data-es="Cabaña" data-fr="Chalet">Hytte</h3>
+        <p data-no="Innandørs komfort nær breen" data-en="Indoor comfort close to the glacier" data-de="Komfort in der Nähe des Gletschers" data-es="Comodidad interior cerca del glaciar" data-fr="Confort intérieur près du glacier">Innandørs komfort nær breen</p>
+      </div>
+      <div class="card reveal" style="transition-delay:80ms">
+        <h3 data-no="Bobilplass" data-en="Motorhome" data-de="Wohnmobilstellplatz" data-es="Autocaravana" data-fr="Camping-car">Bobilplass</h3>
+        <p data-no="Straum og tømmestasjon tilgjengeleg" data-en="Power and dump station available" data-de="Strom und Entsorgungsstation verfügbar" data-es="Electricidad y estación de vaciado disponibles" data-fr="Électricité et station de vidange disponibles">Straum og tømmestasjon tilgjengeleg</p>
+      </div>
+      <div class="card reveal" style="transition-delay:160ms">
+        <h3 data-no="Vognplass" data-en="Caravan" data-de="Wohnwagenstellplatz" data-es="Caravana" data-fr="Caravane">Vognplass</h3>
+        <p data-no="God plass, straum inkludert" data-en="Spacious pitches with power" data-de="Große Stellplätze mit Strom" data-es="Parcelas amplias con electricidad" data-fr="Grands emplacements avec électricité">God plass, straum inkludert</p>
+      </div>
+      <div class="card reveal" style="transition-delay:240ms">
+        <h3 data-no="Teltplass" data-en="Tent" data-de="Zeltplatz" data-es="Parcela de tienda" data-fr="Emplacement tente">Teltplass</h3>
+        <p data-no="Sov under stjernene" data-en="Sleep under the stars" data-de="Schlafen Sie unter den Sternen" data-es="Duerme bajo las estrellas" data-fr="Dormez sous les étoiles">Sov under stjernene</p>
+      </div>
+    </div>
+    <div class="overnatting-cta reveal" style="transition-delay:80ms">
+      <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+         class="btn-accent"
+         data-no="Book opphald"
+         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
+         target="_blank" rel="noopener">Book opphald</a>
+    </div>
+  </div>
+</section>
+
+<!-- FASILITETER -->
+<section id="fasiliteter" aria-label="Fasiliteter">
+  <div class="fasiliteter-inner">
+    <p class="section-label reveal" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</p>
+    <h2 class="section-h2 reveal" data-no="Kva vi tilbyr" data-en="What we offer" data-de="Unser Angebot" data-es="Lo que ofrecemos" data-fr="Ce que nous offrons">Kva vi tilbyr</h2>
+    <div class="facility-grid">
+      <div class="facility-item reveal">
+        <div class="facility-check" aria-hidden="true">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <p data-no="Straum til bobil/campingvogn" data-en="Power for motorhomes &amp; caravans" data-de="Strom für Wohnmobile und Wohnwagen" data-es="Electricidad para autocaravanas y caravanas" data-fr="Électricité pour camping-cars et caravanes">Straum til bobil/campingvogn</p>
+      </div>
+      <div class="facility-item reveal" style="transition-delay:160ms">
+        <div class="facility-check" aria-hidden="true">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <p data-no="Tømming av toalett" data-en="Chemical toilet disposal" data-de="Kassettentoiletten-Entsorgung" data-es="Vaciado de aguas residuales" data-fr="Vidange des eaux usées">Tømming av toalett</p>
+      </div>
+      <div class="facility-item reveal" style="transition-delay:240ms">
+        <div class="facility-check" aria-hidden="true">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <p data-no="500 m frå Breheimsenteret" data-en="500 m from Breheimsenteret" data-de="500 m vom Breheimsenteret" data-es="500 m de Breheimsenteret" data-fr="500 m du Breheimsenteret">500 m frå Breheimsenteret</p>
+      </div>
+      <div class="facility-item reveal" style="transition-delay:320ms">
+        <div class="facility-check" aria-hidden="true">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <p data-no="3 km frå Nigardsbreen parkering" data-en="3 km from Nigardsbreen car park" data-de="3 km vom Parkplatz Nigardsbreen" data-es="3 km del aparcamiento de Nigardsbreen" data-fr="3 km du parking de Nigardsbreen">3 km frå Nigardsbreen parkering</p>
+      </div>
+      <div class="facility-item reveal" style="transition-delay:400ms">
+        <div class="facility-check" aria-hidden="true">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+        <p data-no="Nær Jostedalsbreen nasjonalpark" data-en="Near Jostedalsbreen National Park" data-de="Nahe dem Jostedalsbreen-Nationalpark" data-es="Cerca del Parque Nacional Jostedalsbreen" data-fr="Près du parc national du Jostedalsbreen">Nær Jostedalsbreen nasjonalpark</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERI -->
+<section id="galleri" aria-label="Biletegalleri">
+  <div class="gallery-inner">
+    <p class="section-label section-label-light reveal" data-no="Galleri" data-en="Gallery" data-de="Galerie" data-es="Galería" data-fr="Galerie">Galleri</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,4vw,2.1rem);color:var(--light);margin-bottom:28px;" class="reveal" data-no="Frå området" data-en="From the area" data-de="Aus der Region" data-es="De la zona" data-fr="De la région">Frå området</h2>
+    <div class="gallery-grid">
+      <img class="gallery-top reveal"
+           src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
+           alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
+           loading="lazy">
+      <div class="gallery-row">
+        <img class="reveal" style="transition-delay:80ms"
+             src="Bilder/images_652E2ikTUym8xNkARcbL_1593018440613_964419_541060729272822_352686100_o_1920x1080.webp"
+             alt="Nigardsbreen Camping — hytter og campingplass"
+             loading="lazy">
+        <img class="reveal" style="transition-delay:160ms"
+             src="Bilder/nigardsbreen-camping.jpg"
+             alt="Nigardsbreen Camping — hytter med fjell i bakgrunn"
+             loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BREHEIMSENTERET -->
+<section id="breheimsenteret" aria-label="Breheimsenteret">
+  <div class="bhs-inner">
+    <p class="section-label section-label-light reveal" data-no="Naboen vår" data-en="Our neighbour" data-de="Unser Nachbar" data-es="Nuestro vecino" data-fr="Notre voisin">Naboen vår</p>
+    <h2 class="section-h2-light reveal" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</h2>
+    <div class="bhs-grid">
+      <div class="bhs-img-wrap reveal">
+        <img src="Bilder/72fd0060b958ab51cf17435480f85facfa279adc-1709x1169.avif"
+             alt="Breheimsenteret i Jostedalen"
+             class="bhs-img"
+             loading="lazy">
+      </div>
+      <div class="bhs-content">
+        <div class="bhs-text reveal">
+          <p data-no="500 meter frå campingplassen ligg Breheimsenteret — besøkssenter for Jostedalsbreen og Breheimen nasjonalparkar. Her finn du utstilling om isbreane og klimaet, kafé med utsikt mot Nigardsbreen, og utgangspunkt for alle dei store aktivitetane i dalen."
+             data-en="500 metres from the campsite lies Breheimsenteret — the visitor centre for Jostedalsbreen and Breheimen national parks. Here you'll find exhibitions about glaciers and climate, a café with views of Nigardsbreen, and the starting point for all major activities in the valley."
+             data-de="500 Meter vom Campingplatz liegt das Breheimsenteret — Besucherzentrum für den Jostedalsbreen- und Breheimen-Nationalpark. Hier finden Sie Ausstellungen über Gletscher und Klima, ein Café mit Blick auf den Nigardsbreen und den Ausgangspunkt für alle wichtigen Aktivitäten im Tal."
+             data-es="A 500 metros del camping se encuentra el Breheimsenteret — el centro de visitantes de los parques nacionales de Jostedalsbreen y Breheimen. Aquí encontrará exposiciones sobre glaciares y clima, una cafetería con vistas al Nigardsbreen y el punto de partida para todas las grandes actividades del valle."
+             data-fr="À 500 mètres du camping se trouve le Breheimsenteret — le centre d'accueil des parcs nationaux du Jostedalsbreen et de Breheimen. Vous y trouverez des expositions sur les glaciers et le climat, un café avec vue sur le Nigardsbreen et le point de départ pour toutes les grandes activités de la vallée.">500 meter frå campingplassen ligg Breheimsenteret — besøkssenter for Jostedalsbreen og Breheimen nasjonalparkar. Her finn du utstilling om isbreane og klimaet, kafé med utsikt mot Nigardsbreen, og utgangspunkt for alle dei store aktivitetane i dalen.</p>
+          <a href="https://www.jostedal.com" target="_blank" rel="noopener" class="bhs-link" data-no="Les meir og book turar på jostedal.com →" data-en="Read more and book tours at jostedal.com →" data-de="Mehr Informationen und Touren buchen auf jostedal.com →" data-es="Más información y reservas en jostedal.com →" data-fr="Plus d’informations et réservations sur jostedal.com →">Les meir og book turar på jostedal.com →</a>
+        </div>
+        <div class="bhs-list reveal" style="transition-delay:80ms">
+        <div class="bhs-item">
+          <div class="bhs-dot"></div>
+          <p data-no="Utstilling om isbre og klima" data-en="Glacier and climate exhibition" data-de="Ausstellung über Gletscher und Klima" data-es="Exposición sobre glaciares y clima" data-fr="Exposition sur les glaciers et le climat">Utstilling om isbre og klima</p>
+        </div>
+        <div class="bhs-item">
+          <div class="bhs-dot"></div>
+          <p data-no="Kafé med utsikt mot Nigardsbreen" data-en="Café with views of Nigardsbreen" data-de="Café mit Blick auf den Nigardsbreen" data-es="Cafetería con vistas al Nigardsbreen" data-fr="Café avec vue sur le Nigardsbreen">Kafé med utsikt mot Nigardsbreen</p>
+        </div>
+        <div class="bhs-item">
+          <div class="bhs-dot"></div>
+          <p data-no="Guideturer på breen" data-en="Guided glacier tours" data-de="Geführte Gletschertouren" data-es="Excursiones guiadas al glaciar" data-fr="Excursions guidées sur le glacier">Guideturer på breen</p>
+        </div>
+        <div class="bhs-item">
+          <div class="bhs-dot"></div>
+          <p data-no="Kajakkpadling og rafting" data-en="Kayaking and rafting" data-de="Kajak und Rafting" data-es="Kayak y rafting" data-fr="Kayak et rafting">Kajakkpadling og rafting</p>
+        </div>
+        <div class="bhs-item">
+          <div class="bhs-dot"></div>
+          <p data-no="Sesong frå 1. mai" data-en="Season from 1 May" data-de="Saison ab 1. Mai" data-es="Temporada desde el 1 de mayo" data-fr="Saison à partir du 1er mai">Sesong frå 1. mai</p>
+        </div>
+        </div><!-- /bhs-list -->
+      </div><!-- /bhs-content -->
+    </div><!-- /bhs-grid -->
+  </div><!-- /bhs-inner -->
+</section>
+
+<!-- KART OG KONTAKT -->
+<section id="kontakt" aria-label="Kart og kontakt">
+  <div class="kontakt-inner">
+    <p class="section-label reveal" data-no="Kart og kontakt" data-en="Map &amp; contact" data-de="Karte und Kontakt" data-es="Mapa y contacto" data-fr="Carte et contact">Kart og kontakt</p>
+    <h2 class="section-h2 reveal" data-no="Finn oss" data-en="Find us" data-de="So finden Sie uns" data-es="Encuéntranos" data-fr="Nous trouver">Finn oss</h2>
+    <div class="kontakt-grid">
+      <div class="reveal">
+        <iframe
+          src="https://maps.google.com/maps?q=61.6555148,7.2753751&z=16&t=k&output=embed"
+          width="100%" height="340"
+          style="border:0;border-radius:12px;display:block"
+          allowfullscreen loading="lazy"
+          title="Kart over Nigardsbreen Camping"></iframe>
+      </div>
+      <div class="contact-info reveal" style="transition-delay:80ms">
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <a href="tel:+4757683135">+47 57 68 31 35</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">✉</span>
+          <a href="mailto:camping@jostedal.com">camping@jostedal.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <p>Mjølversgrendi 3, 6871 Jostedal</p>
+        </div>
+        <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+           class="btn-accent"
+           data-no="Book opphald"
+           data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
+           target="_blank" rel="noopener"
+           style="align-self:flex-start">Book opphald</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <p class="footer-logo">Nigardsbreen Camping</p>
+  <div class="footer-contact">
+    <a href="tel:+4757683135">+47 57 68 31 35</a>
+    <a href="mailto:camping@jostedal.com">camping@jostedal.com</a>
+  </div>
+  <p class="footer-credit">
+    Nettside levert av
+    <a href="https://norbergwebdesign.no/" target="_blank" rel="noopener">Norberg Webdesign</a>
+  </p>
+  <p class="footer-copy">© 2026 Nigardsbreen Camping</p>
+  <p class="footer-copy">Org.nr. 976 741 242</p>
+</footer>
+
+
+<script>
+  // LANGUAGE TOGGLE
+  function setLang(lang) {
+    localStorage.setItem('lang', lang);
+    document.querySelectorAll('[data-no]').forEach(function(el) {
+      el.textContent = el.dataset[lang] || el.dataset.no;
+    });
+    ['no','en','de'].forEach(function(l) {
+      var btn = document.getElementById('btn-' + l);
+      if (btn) btn.classList.toggle('active', l === lang);
+    });
+  }
+
+  var savedLang = localStorage.getItem('lang');
+  if (savedLang) {
+    setLang(savedLang);
+  } else {
+    setLang('no');
+    fetch('https://ipapi.co/country/')
+      .then(function(r) { return r.text(); })
+      .then(function(country) {
+        var c = country.trim();
+        var lang = 'en';
+        if (c === 'NO') lang = 'no';
+        else if (['DE','AT','LI'].indexOf(c) !== -1) lang = 'de';
+        setLang(lang);
+      })
+      .catch(function() {
+        var bl = (navigator.language || '').toLowerCase();
+        var lang = bl.startsWith('no') || bl.startsWith('nb') || bl.startsWith('nn') ? 'no'
+                 : bl.startsWith('de') ? 'de' : 'en';
+        setLang(lang);
+      });
+  }
+
+  // STICKY HEADER SHADOW
+  var header = document.getElementById('header');
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // HAMBURGER MENU
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', function() {
+    var isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // SCROLL REVEAL
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  // COUNTER ANIMATION (nærleik-strip)
+  if (!prefersReduced) {
+    function animateCounter(el, target, duration) {
+      var start = performance.now();
+      function step(now) {
+        var elapsed = now - start;
+        var progress = Math.min(elapsed / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * ease);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    var counterDone = false;
+    var counterObserver = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting && !counterDone) {
+        counterDone = true;
+        document.querySelectorAll('.naerleik-num[data-count]').forEach(function(el) {
+          animateCounter(el, parseInt(el.dataset.count), 1100);
+        });
+        counterObserver.disconnect();
+      }
+    }, { threshold: 0.4 });
+
+    var strip = document.getElementById('naerleik');
+    if (strip) counterObserver.observe(strip);
+  }
+</script>
+</body>
+</html>
