@@ -8,7 +8,7 @@
   <meta property="og:title" content="Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen">
   <meta property="og:description" content="Camping ved foten av Nigardsbreen. Bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg">
+  <meta property="og:image" content="Bilder/Nigardsbreen-camping-e1718191783292.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400;1,9..144,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -243,7 +243,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg');
+      background-image: url('Bilder/Nigardsbreen-camping-e1718191783292.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -390,7 +390,26 @@
 
     /* OM OSS */
     #om-oss { background: var(--bg); padding: 80px 24px; }
-    .om-oss-inner { max-width: 660px; margin: 0 auto; }
+    .om-oss-inner { max-width: 1000px; margin: 0 auto; }
+    .om-oss-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 8px;
+    }
+    @media (min-width: 768px) {
+      .om-oss-grid { grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    }
+    .om-oss-img-wrap { border-radius: 10px; overflow: hidden; }
+    .om-oss-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      .om-oss-img { height: 100%; min-height: 320px; }
+    }
     .section-label {
       font-size: 0.72rem;
       font-weight: 500;
@@ -424,6 +443,8 @@
     /* OVERNATTING */
     #overnatting { background: var(--primary); padding: 80px 24px; }
     .overnatting-inner { max-width: 1100px; margin: 0 auto; }
+    .overnatting-inner > .section-label-light,
+    .overnatting-inner > .section-h2-light { text-align: center; }
     .section-label-light { color: rgba(74,155,143,0.9); }
     .section-h2-light {
       font-size: clamp(1.5rem, 4vw, 2.1rem);
@@ -433,7 +454,7 @@
 
     .cards-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 14px;
     }
     .card {
@@ -470,8 +491,12 @@
     }
     .btn-accent:hover { background: #3d8a7f; transform: translateY(-2px); }
 
-    @media (min-width: 768px) {
-      .cards-grid { grid-template-columns: repeat(4, 1fr); }
+    @media (min-width: 600px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 720px;
+        margin: 0 auto;
+      }
     }
 
     /* FASILITETER */
@@ -704,6 +729,7 @@
       .float-btn { display: flex; }
     }
   </style>
+  <script type="text/javascript" src="https://app.bookspot.io/widget/v3/gws.js" async></script>
 </head>
 <body>
 
@@ -727,11 +753,11 @@
           <button class="flag-btn" id="btn-de" onclick="setLang('de')" title="Deutsch">🇩🇪</button>
         </div>
       </div>
-      <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+      <a href="#"
          class="btn-book-header"
+         onclick="window.gws.init('a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7'); return false;"
          data-no="Book opphald"
-         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
-         target="_blank" rel="noopener">Book opphald</a>
+         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
       <button class="hamburger" id="hamburger" aria-label="Opne meny" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -746,11 +772,11 @@
   <a href="#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
   <a href="#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
   <a href="#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
-  <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+  <a href="#"
      class="btn-menu-book"
+     onclick="window.gws.init('a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7'); return false;"
      data-no="Book opphald"
-     data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
-     target="_blank" rel="noopener">Book opphald</a>
+     data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
 </nav>
 
 <!-- HERO -->
@@ -762,11 +788,11 @@
     <h1 class="hero-h1" data-no="Sov ved foten av breen." data-en="Sleep at the foot of the glacier." data-de="Schlafen Sie am Fuß des Gletschers." data-es="Duerme a los pies del glaciar." data-fr="Dormez au pied du glacier.">Sov ved foten av breen.</h1>
     <p class="hero-sub" data-no="Nigardsbreen Camping — 500 meter frå Breheimsenteret, midt i hjartet av Jostedalen." data-en="Nigardsbreen Camping — 500 metres from Breheimsenteret, in the heart of Jostedalen." data-de="Nigardsbreen Camping — 500 Meter vom Breheimsenteret, im Herzen von Jostedalen." data-es="Nigardsbreen Camping — a 500 metros de Breheimsenteret, en el corazón de Jostedalen." data-fr="Nigardsbreen Camping — à 500 mètres du Breheimsenteret, au cœur de Jostedalen.">Nigardsbreen Camping — 500 meter frå Breheimsenteret, midt i hjartet av Jostedalen.</p>
 
-    <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+    <a href="#"
        class="btn-hero"
+       onclick="window.gws.init('a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7'); return false;"
        data-no="Book opphald"
-       data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
-       target="_blank" rel="noopener">Book opphald</a>
+       data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
     <a href="#overnatting" class="hero-secondary" data-no="Sjå kva vi tilbyr ↓" data-en="See what we offer ↓" data-de="Unser Angebot entdecken ↓" data-es="Ver lo que ofrecemos ↓" data-fr="Voir ce que nous offrons ↓">Sjå kva vi tilbyr ↓</a>
   </div>
   <div class="scroll-hint" aria-hidden="true">
@@ -797,9 +823,17 @@
   <div class="om-oss-inner">
     <p class="section-label reveal" data-no="Om campingen" data-en="About the campsite" data-de="Über den Campingplatz" data-es="Sobre el camping" data-fr="À propos du camping">Om campingen</p>
     <h2 class="section-h2 reveal" data-no="Midt i norsk fjellnatur" data-en="In the heart of Norwegian mountain nature" data-de="Mitten in norwegischer Berglandschaft" data-es="En plena naturaleza de montaña noruega" data-fr="Au cœur de la nature montagnarde norvégienne">Midt i norsk fjellnatur</h2>
-    <div class="om-oss-text reveal">
-      <p data-no="God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på."
-         data-en="A great campsite at the foot of Nigardsbreen, perfect for glacier hikes or walks into the valleys surrounding Jostedalsbreen National Park. 500 metres from Breheimsenteret — right in the heart of it all." data-de="Ein großartiger Campingplatz am Fuß des Nigardsbreen, ideal für Gletschertouren oder Wanderungen durch die Täler des Jostedalsbreen-Nationalparks. 500 Meter vom Breheimsenteret — mitten im Besten, was die Natur zu bieten hat." data-es="Un excelente camping al pie del Nigardsbreen, perfecto para excursiones al glaciar o por los valles del Parque Nacional Jostedalsbreen. 500 metros del Breheimsenteret — en el corazón de todo." data-fr="Un excellent camping au pied du Nigardsbreen, idéal pour des randonnées sur le glacier ou dans les vallées du parc national du Jostedalsbreen. À 500 mètres du Breheimsenteret — au cœur de ce que la nature a de mieux à offrir.">God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på.</p>
+    <div class="om-oss-grid">
+      <div class="om-oss-img-wrap reveal">
+        <img src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
+             alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
+             class="om-oss-img"
+             loading="lazy">
+      </div>
+      <div class="om-oss-text reveal">
+        <p data-no="God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på."
+           data-en="A great campsite at the foot of Nigardsbreen, perfect for glacier hikes or walks into the valleys surrounding Jostedalsbreen National Park. 500 metres from Breheimsenteret — right in the heart of it all." data-de="Ein großartiger Campingplatz am Fuß des Nigardsbreen, ideal für Gletschertouren oder Wanderungen durch die Täler des Jostedalsbreen-Nationalparks. 500 Meter vom Breheimsenteret — mitten im Besten, was die Natur zu bieten hat." data-es="Un excelente camping al pie del Nigardsbreen, perfecto para excursiones al glaciar o por los valles del Parque Nacional Jostedalsbreen. 500 metros del Breheimsenteret — en el corazón de todo." data-fr="Un excellent camping au pied du Nigardsbreen, idéal pour des randonnées sur le glacier ou dans les vallées du parc national du Jostedalsbreen. À 500 mètres du Breheimsenteret — au cœur de ce que la nature a de mieux à offrir.">God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -824,11 +858,11 @@
       </div>
     </div>
     <div class="overnatting-cta reveal" style="transition-delay:80ms">
-      <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+      <a href="#"
          class="btn-accent"
+         onclick="window.gws.init('a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7'); return false;"
          data-no="Book opphald"
-         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
-         target="_blank" rel="noopener">Book opphald</a>
+         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
     </div>
   </div>
 </section>
@@ -879,10 +913,16 @@
     <p class="section-label section-label-light reveal" data-no="Galleri" data-en="Gallery" data-de="Galerie" data-es="Galería" data-fr="Galerie">Galleri</p>
     <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,4vw,2.1rem);color:var(--light);margin-bottom:28px;" class="reveal" data-no="Frå området" data-en="From the area" data-de="Aus der Region" data-es="De la zona" data-fr="De la région">Frå området</h2>
     <div class="gallery-grid">
-      <img class="gallery-top reveal"
-           src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
-           alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
-           loading="lazy">
+      <div class="gallery-row">
+        <img class="reveal"
+             src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
+             alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
+             loading="lazy">
+        <img class="reveal" style="transition-delay:80ms"
+             src="Bilder/images_652E2ikTUym8xNkARcbL_1593018440613_964419_541060729272822_352686100_o_1920x1080.webp"
+             alt="Nigardsbreen Camping — campingplass med fjell i bakgrunn"
+             loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -962,11 +1002,11 @@
           <span class="contact-icon" aria-hidden="true">📍</span>
           <p>Mjølversgrendi 3, 6871 Jostedal</p>
         </div>
-        <a href="https://app.bookspot.io/widget/v2/dialog/new-order?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7&productTypes=products,vouchers&listView=products"
+        <a href="#"
            class="btn-accent"
+           onclick="window.gws.init('a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7'); return false;"
            data-no="Book opphald"
            data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
-           target="_blank" rel="noopener"
            style="align-self:flex-start">Book opphald</a>
       </div>
     </div>
