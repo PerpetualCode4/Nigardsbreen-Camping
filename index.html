@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen</title>
-  <meta name="description" content="Camping ved foten av Nigardsbreen. Hytter, bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret. Ring +47 57 68 31 35.">
+  <meta name="description" content="Camping ved foten av Nigardsbreen. Bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret. Ring +47 57 68 31 35.">
   <meta property="og:title" content="Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen">
-  <meta property="og:description" content="Camping ved foten av Nigardsbreen. Hytter, bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret.">
+  <meta property="og:description" content="Camping ved foten av Nigardsbreen. Bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="Bilder/Nigardsbreen-camping-e1718191783292.jpg">
+  <meta property="og:image" content="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400;1,9..144,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -243,7 +243,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('Bilder/Nigardsbreen-camping-e1718191783292.jpg');
+      background-image: url('Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -720,10 +720,10 @@
         <a href="#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
       </nav>
       <div class="lang-toggle-wrap">
-        <span class="lang-label" data-no="Vel språk" data-en="Choose language" data-de="Sprache wählen">Vel språk</span>
+        <span class="lang-label" data-no="Vel språk" data-en="Choose language" data-de="Sprache wählen">Choose language</span>
         <div class="lang-flags" role="group" aria-label="Select language">
-          <button class="flag-btn active" id="btn-no" onclick="setLang('no')" title="Norsk">🇳🇴</button>
-          <button class="flag-btn" id="btn-en" onclick="setLang('en')" title="English">🇬🇧</button>
+          <button class="flag-btn" id="btn-no" onclick="setLang('no')" title="Norsk">🇳🇴</button>
+          <button class="flag-btn active" id="btn-en" onclick="setLang('en')" title="English">🇬🇧</button>
           <button class="flag-btn" id="btn-de" onclick="setLang('de')" title="Deutsch">🇩🇪</button>
         </div>
       </div>
@@ -811,10 +811,6 @@
     <h2 class="section-h2-light reveal" data-no="Vel ditt opphald" data-en="Choose your stay" data-de="Wählen Sie Ihren Aufenthalt" data-es="Elige tu estancia" data-fr="Choisissez votre séjour">Vel ditt opphald</h2>
     <div class="cards-grid">
       <div class="card reveal">
-        <h3 data-no="Hytte" data-en="Cabin" data-de="Hütte" data-es="Cabaña" data-fr="Chalet">Hytte</h3>
-        <p data-no="Innandørs komfort nær breen" data-en="Indoor comfort close to the glacier" data-de="Komfort in der Nähe des Gletschers" data-es="Comodidad interior cerca del glaciar" data-fr="Confort intérieur près du glacier">Innandørs komfort nær breen</p>
-      </div>
-      <div class="card reveal" style="transition-delay:80ms">
         <h3 data-no="Bobilplass" data-en="Motorhome" data-de="Wohnmobilstellplatz" data-es="Autocaravana" data-fr="Camping-car">Bobilplass</h3>
         <p data-no="Straum og tømmestasjon tilgjengeleg" data-en="Power and dump station available" data-de="Strom und Entsorgungsstation verfügbar" data-es="Electricidad y estación de vaciado disponibles" data-fr="Électricité et station de vidange disponibles">Straum og tømmestasjon tilgjengeleg</p>
       </div>
@@ -887,16 +883,6 @@
            src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
            alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
            loading="lazy">
-      <div class="gallery-row">
-        <img class="reveal" style="transition-delay:80ms"
-             src="Bilder/images_652E2ikTUym8xNkARcbL_1593018440613_964419_541060729272822_352686100_o_1920x1080.webp"
-             alt="Nigardsbreen Camping — hytter og campingplass"
-             loading="lazy">
-        <img class="reveal" style="transition-delay:160ms"
-             src="Bilder/nigardsbreen-camping.jpg"
-             alt="Nigardsbreen Camping — hytter med fjell i bakgrunn"
-             loading="lazy">
-      </div>
     </div>
   </div>
 </section>
@@ -1017,26 +1003,7 @@
   }
 
   var savedLang = localStorage.getItem('lang');
-  if (savedLang) {
-    setLang(savedLang);
-  } else {
-    setLang('no');
-    fetch('https://ipapi.co/country/')
-      .then(function(r) { return r.text(); })
-      .then(function(country) {
-        var c = country.trim();
-        var lang = 'en';
-        if (c === 'NO') lang = 'no';
-        else if (['DE','AT','LI'].indexOf(c) !== -1) lang = 'de';
-        setLang(lang);
-      })
-      .catch(function() {
-        var bl = (navigator.language || '').toLowerCase();
-        var lang = bl.startsWith('no') || bl.startsWith('nb') || bl.startsWith('nn') ? 'no'
-                 : bl.startsWith('de') ? 'de' : 'en';
-        setLang(lang);
-      });
-  }
+  setLang(savedLang || 'en');
 
   // STICKY HEADER SHADOW
   var header = document.getElementById('header');
