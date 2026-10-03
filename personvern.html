@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen</title>
-  <meta name="description" content="Camping ved foten av Nigardsbreen. Bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret. Ring +47 57 68 31 35.">
-  <meta property="og:title" content="Nigardsbreen Camping — Overnatting ved Nigardsbreen, Jostedalen">
-  <meta property="og:description" content="Camping ved foten av Nigardsbreen. Bobilplass, vognplass og teltplass. 500 m frå Breheimsenteret.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="Bilder/Nigardsbreen-camping-e1718191783292.jpg">
+  <title>Personvern — Nigardsbreen Camping</title>
+  <meta name="description" content="Personvernerklæring for Nigardsbreen Camping.">
   <link href="fonts/fonts.css" rel="stylesheet">
   <style>
     :root {
@@ -726,6 +722,16 @@
     @media (max-width: 767px) {
       .float-btn { display: flex; }
     }
+
+    /* PERSONVERN */
+    .pv { max-width: 720px; margin: 0 auto; padding: 140px 24px 96px; }
+    .pv h1 { font-size: clamp(2rem, 5vw, 2.8rem); color: var(--primary); margin-bottom: 36px; }
+    .pv h2 { font-size: 1.2rem; color: var(--accent); margin: 34px 0 10px; }
+    .pv p { color: var(--muted); line-height: 1.75; }
+    .pv p + p { margin-top: 10px; }
+    .pv a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .pv p.pv-dato { margin-top: 44px; font-size: 0.85rem; }
+    .footer-pv a { text-decoration: underline; text-underline-offset: 3px; }
   </style>
 </head>
 <body>
@@ -733,14 +739,14 @@
 <!-- HEADER -->
 <header id="header">
   <div class="header-inner">
-    <a href="#" class="logo">Nigardsbreen Camping</a>
+    <a href="index.html" class="logo">Nigardsbreen Camping</a>
     <div class="header-right">
       <nav class="nav-desktop">
-        <a href="#overnatting" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</a>
-        <a href="#fasiliteter" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</a>
-        <a href="#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
-        <a href="#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
-        <a href="#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
+        <a href="index.html#overnatting" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</a>
+        <a href="index.html#fasiliteter" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</a>
+        <a href="index.html#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
+        <a href="index.html#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
+        <a href="index.html#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
       </nav>
       <div class="lang-toggle-wrap">
         <span class="lang-label" data-no="Vel språk" data-en="Choose language" data-de="Sprache wählen">Choose language</span>
@@ -763,249 +769,37 @@
 
 <!-- MOBILE MENU -->
 <nav class="mobile-menu" id="mobile-menu" aria-label="Hovudmeny">
-  <a href="#overnatting" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</a>
-  <a href="#fasiliteter" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</a>
-  <a href="#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
-  <a href="#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
-  <a href="#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
+  <a href="index.html#overnatting" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</a>
+  <a href="index.html#fasiliteter" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</a>
+  <a href="index.html#breheimsenteret" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</a>
+  <a href="index.html#kontakt" data-no="Kart" data-en="Map" data-de="Karte" data-es="Mapa" data-fr="Carte">Kart</a>
+  <a href="index.html#kontakt" data-no="Kontakt" data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Kontakt</a>
   <a href="https://app.bookspot.io/widget/v3/dialog?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7" target="_blank" rel="noopener"
      class="btn-menu-book"
      data-no="Book opphald"
      data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow" data-no="Jostedalen · Vestland · Noreg" data-en="Jostedalen · Vestland · Norway" data-de="Jostedalen · Vestland · Norwegen" data-es="Jostedalen · Vestland · Noruega" data-fr="Jostedalen · Vestland · Norvège">Jostedalen · Vestland · Noreg</p>
-    <h1 class="hero-h1" data-no="Sov ved foten av breen." data-en="Sleep at the foot of the glacier." data-de="Schlafen Sie am Fuß des Gletschers." data-es="Duerme a los pies del glaciar." data-fr="Dormez au pied du glacier.">Sov ved foten av breen.</h1>
-    <p class="hero-sub" data-no="Nigardsbreen Camping — 500 meter frå Breheimsenteret, midt i hjartet av Jostedalen." data-en="Nigardsbreen Camping — 500 metres from Breheimsenteret, in the heart of Jostedalen." data-de="Nigardsbreen Camping — 500 Meter vom Breheimsenteret, im Herzen von Jostedalen." data-es="Nigardsbreen Camping — a 500 metros de Breheimsenteret, en el corazón de Jostedalen." data-fr="Nigardsbreen Camping — à 500 mètres du Breheimsenteret, au cœur de Jostedalen.">Nigardsbreen Camping — 500 meter frå Breheimsenteret, midt i hjartet av Jostedalen.</p>
+<main class="pv">
+    <h1 data-no="Personvernerklæring" data-en="Privacy policy" data-de="Datenschutzerklärung">Personvernerklæring</h1>
+    <h2 data-no="Behandlingsansvarleg" data-en="Data controller" data-de="Verantwortlicher">Behandlingsansvarleg</h2>
+    <p data-no="Nigardsbreen Camping blir driven av Breheimsenteret AS, org.nr. 976 741 242, Brevegen 8, 6871 Jostedal." data-en="Nigardsbreen Camping is operated by Breheimsenteret AS, org. no. 976 741 242, Brevegen 8, 6871 Jostedal, Norway." data-de="Nigardsbreen Camping wird von Breheimsenteret AS betrieben, Org.-Nr. 976 741 242, Brevegen 8, 6871 Jostedal, Norwegen.">Nigardsbreen Camping blir driven av Breheimsenteret AS, org.nr. 976 741 242, Brevegen 8, 6871 Jostedal.</p>
+    <p><span data-no="Telefon:" data-en="Phone:" data-de="Telefon:">Telefon:</span> <a href="tel:+4757683250">+47 57 68 32 50</a></p>
+    <h2 data-no="Kva vi samlar inn" data-en="What we collect" data-de="Welche Daten wir erheben">Kva vi samlar inn</h2>
+    <p data-no="Nettsida har ikkje kontaktskjema og samlar ikkje inn personopplysningar. Tek du kontakt på telefon eller e-post, brukar vi opplysningane berre til å svare deg." data-en="This website has no contact form and does not collect personal data. If you contact us by phone or email, we only use your information to reply to you." data-de="Diese Website hat kein Kontaktformular und erhebt keine personenbezogenen Daten. Wenn Sie uns telefonisch oder per E-Mail kontaktieren, verwenden wir Ihre Angaben nur, um Ihnen zu antworten.">Nettsida har ikkje kontaktskjema og samlar ikkje inn personopplysningar. Tek du kontakt på telefon eller e-post, brukar vi opplysningane berre til å svare deg.</p>
+    <h2 data-no="Booking" data-en="Booking" data-de="Buchung">Booking</h2>
+    <p data-no="Når du trykker «Book opphald», kjem du til bookingsystemet Bookspot på ei eiga side. Opplysningane du gir der, blir registrerte i Bookspot og brukte til å handtere bestillinga di. Bookspot har eiga personvernerklæring." data-en="When you click “Book your stay”, you are taken to the Bookspot booking system on a separate page. The information you provide there is stored in Bookspot and used to handle your booking. Bookspot has its own privacy policy." data-de="Wenn Sie auf „Unterkunft buchen“ klicken, gelangen Sie auf einer separaten Seite zum Buchungssystem Bookspot. Die dort angegebenen Daten werden in Bookspot gespeichert und zur Bearbeitung Ihrer Buchung verwendet. Bookspot hat eine eigene Datenschutzerklärung.">Når du trykker «Book opphald», kjem du til bookingsystemet Bookspot på ei eiga side. Opplysningane du gir der, blir registrerte i Bookspot og brukte til å handtere bestillinga di. Bookspot har eiga personvernerklæring.</p>
+    <h2 data-no="Kart" data-en="Map" data-de="Karte">Kart</h2>
+    <p data-no="Kartet på framsida kjem frå Google Maps. Når kartet blir lasta, får Google mellom anna IP-adressa di, og Google kan setje informasjonskapslar. Google er sjølv ansvarleg for denne behandlinga." data-en="The map on the front page is provided by Google Maps. When the map loads, Google receives information such as your IP address and may set cookies. Google is responsible for this processing." data-de="Die Karte auf der Startseite stammt von Google Maps. Beim Laden der Karte erhält Google unter anderem Ihre IP-Adresse und kann Cookies setzen. Google ist für diese Verarbeitung selbst verantwortlich.">Kartet på framsida kjem frå Google Maps. Når kartet blir lasta, får Google mellom anna IP-adressa di, og Google kan setje informasjonskapslar. Google er sjølv ansvarleg for denne behandlinga.</p>
+    <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-no="Google si personvernerklæring" data-en="Google’s privacy policy" data-de="Datenschutzerklärung von Google">Google si personvernerklæring</a></p>
+    <h2 data-no="Informasjonskapslar" data-en="Cookies" data-de="Cookies">Informasjonskapslar</h2>
+    <p data-no="Sjølve nettsida set ingen informasjonskapslar og brukar ikkje besøksstatistikk. Språkvalet ditt blir lagra i nettlesaren din, slik at sida hugsar det neste gong. Det blir ikkje sendt til oss." data-en="The website itself sets no cookies and uses no visitor statistics. Your language choice is stored in your browser so the site remembers it next time. It is not sent to us." data-de="Die Website selbst setzt keine Cookies und verwendet keine Besucherstatistik. Ihre Sprachwahl wird in Ihrem Browser gespeichert, damit die Seite sie beim nächsten Besuch kennt. Sie wird nicht an uns übermittelt.">Sjølve nettsida set ingen informasjonskapslar og brukar ikkje besøksstatistikk. Språkvalet ditt blir lagra i nettlesaren din, slik at sida hugsar det neste gong. Det blir ikkje sendt til oss.</p>
+    <h2 data-no="Rettane dine" data-en="Your rights" data-de="Ihre Rechte">Rettane dine</h2>
+    <p data-no="Du har rett til innsyn i, retting og sletting av opplysningar vi har om deg. Ta kontakt på telefonnummeret over. Meiner du at vi behandlar personopplysningar i strid med regelverket, kan du klage til Datatilsynet." data-en="You have the right to access, correct and delete the information we hold about you. Contact us at the phone number above. If you believe we process personal data unlawfully, you can complain to the Norwegian Data Protection Authority (Datatilsynet)." data-de="Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer bei uns gespeicherten Daten. Kontaktieren Sie uns unter der oben genannten Telefonnummer. Wenn Sie der Meinung sind, dass wir personenbezogene Daten rechtswidrig verarbeiten, können Sie sich bei der norwegischen Datenschutzbehörde (Datatilsynet) beschweren.">Du har rett til innsyn i, retting og sletting av opplysningar vi har om deg. Ta kontakt på telefonnummeret over. Meiner du at vi behandlar personopplysningar i strid med regelverket, kan du klage til Datatilsynet.</p>
+    <p><a href="https://www.datatilsynet.no" target="_blank" rel="noopener">datatilsynet.no</a></p>
+    <p class="pv-dato" data-no="Sist oppdatert: 3. oktober 2026" data-en="Last updated: 3 October 2026" data-de="Zuletzt aktualisiert: 3. Oktober 2026">Sist oppdatert: 3. oktober 2026</p>
+</main>
 
-    <a href="https://app.bookspot.io/widget/v3/dialog?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7" target="_blank" rel="noopener"
-       class="btn-hero"
-       data-no="Book opphald"
-       data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
-    <a href="#overnatting" class="hero-secondary" data-no="Sjå kva vi tilbyr ↓" data-en="See what we offer ↓" data-de="Unser Angebot entdecken ↓" data-es="Ver lo que ofrecemos ↓" data-fr="Voir ce que nous offrons ↓">Sjå kva vi tilbyr ↓</a>
-  </div>
-  <div class="scroll-hint" aria-hidden="true">
-    <div class="scroll-hint-inner"><div class="scroll-hint-dot"></div></div>
-  </div>
-</section>
-
-<!-- NÆRLEIK STRIP -->
-<section id="naerleik" aria-label="Avstandar">
-  <div class="naerleik-inner">
-    <div class="naerleik-item reveal">
-      <div class="naerleik-num" data-count="500">500</div>
-      <div class="naerleik-label" data-no="m — Breheimsenteret" data-en="m — Breheimsenteret" data-de="m — Breheimsenteret" data-es="m — Breheimsenteret" data-fr="m — Breheimsenteret">m — Breheimsenteret</div>
-    </div>
-    <div class="naerleik-item reveal" style="transition-delay:80ms">
-      <div class="naerleik-num" data-count="3">3</div>
-      <div class="naerleik-label" data-no="km — Nigardsbreen parkering" data-en="km — Nigardsbreen car park" data-de="km — Parkplatz Nigardsbreen" data-es="km — Aparcamiento Nigardsbreen" data-fr="km — Parking Nigardsbreen">km — Nigardsbreen parkering</div>
-    </div>
-    <div class="naerleik-item reveal" style="transition-delay:160ms">
-      <div class="naerleik-num" style="font-size:1.4rem" data-no="Rett ved" data-en="Right by" data-de="Direkt am" data-es="Junto al" data-fr="Juste à côté du">Rett ved</div>
-      <div class="naerleik-label" data-no="Nigardsbreen isbre" data-en="Nigardsbreen Glacier" data-de="Gletscher Nigardsbreen" data-es="Glaciar Nigardsbreen" data-fr="Glacier Nigardsbreen">Nigardsbreen isbre</div>
-    </div>
-  </div>
-</section>
-
-<!-- OM OSS -->
-<section id="om-oss" aria-label="Om campingen">
-  <div class="om-oss-inner">
-    <p class="section-label reveal" data-no="Om campingen" data-en="About the campsite" data-de="Über den Campingplatz" data-es="Sobre el camping" data-fr="À propos du camping">Om campingen</p>
-    <h2 class="section-h2 reveal" data-no="Midt i norsk fjellnatur" data-en="In the heart of Norwegian mountain nature" data-de="Mitten in norwegischer Berglandschaft" data-es="En plena naturaleza de montaña noruega" data-fr="Au cœur de la nature montagnarde norvégienne">Midt i norsk fjellnatur</h2>
-    <div class="om-oss-grid">
-      <div class="om-oss-img-wrap reveal">
-        <img src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
-             alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
-             class="om-oss-img"
-             loading="lazy">
-      </div>
-      <div class="om-oss-text reveal">
-        <p data-no="God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på."
-           data-en="A great campsite at the foot of Nigardsbreen, perfect for glacier hikes or walks into the valleys surrounding Jostedalsbreen National Park. 500 metres from Breheimsenteret — right in the heart of it all." data-de="Ein großartiger Campingplatz am Fuß des Nigardsbreen, ideal für Gletschertouren oder Wanderungen durch die Täler des Jostedalsbreen-Nationalparks. 500 Meter vom Breheimsenteret — mitten im Besten, was die Natur zu bieten hat." data-es="Un excelente camping al pie del Nigardsbreen, perfecto para excursiones al glaciar o por los valles del Parque Nacional Jostedalsbreen. 500 metros del Breheimsenteret — en el corazón de todo." data-fr="Un excellent camping au pied du Nigardsbreen, idéal pour des randonnées sur le glacier ou dans les vallées du parc national du Jostedalsbreen. À 500 mètres du Breheimsenteret — au cœur de ce que la nature a de mieux à offrir.">God campingplass ved foten av Nigardsbreen, perfekt for turar på breen eller i dalane inn mot Jostedalsbreen nasjonalpark. 500 meter frå Breheimsenteret — midt i det beste naturen har å by på.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OVERNATTING -->
-<section id="overnatting" aria-label="Overnatting">
-  <div class="overnatting-inner">
-    <p class="section-label section-label-light reveal" data-no="Overnatting" data-en="Accommodation" data-de="Unterkunft" data-es="Alojamiento" data-fr="Hébergement">Overnatting</p>
-    <h2 class="section-h2-light reveal" data-no="Vel ditt opphald" data-en="Choose your stay" data-de="Wählen Sie Ihren Aufenthalt" data-es="Elige tu estancia" data-fr="Choisissez votre séjour">Vel ditt opphald</h2>
-    <div class="cards-grid">
-      <div class="card reveal">
-        <h3 data-no="Bobilplass" data-en="Motorhome" data-de="Wohnmobilstellplatz" data-es="Autocaravana" data-fr="Camping-car">Bobilplass</h3>
-        <p data-no="Straum og tømmestasjon tilgjengeleg" data-en="Power and dump station available" data-de="Strom und Entsorgungsstation verfügbar" data-es="Electricidad y estación de vaciado disponibles" data-fr="Électricité et station de vidange disponibles">Straum og tømmestasjon tilgjengeleg</p>
-      </div>
-      <div class="card reveal" style="transition-delay:160ms">
-        <h3 data-no="Vognplass" data-en="Caravan" data-de="Wohnwagenstellplatz" data-es="Caravana" data-fr="Caravane">Vognplass</h3>
-        <p data-no="God plass, straum inkludert" data-en="Spacious pitches with power" data-de="Große Stellplätze mit Strom" data-es="Parcelas amplias con electricidad" data-fr="Grands emplacements avec électricité">God plass, straum inkludert</p>
-      </div>
-      <div class="card reveal" style="transition-delay:240ms">
-        <h3 data-no="Teltplass" data-en="Tent" data-de="Zeltplatz" data-es="Parcela de tienda" data-fr="Emplacement tente">Teltplass</h3>
-        <p data-no="Sov under stjernene" data-en="Sleep under the stars" data-de="Schlafen Sie unter den Sternen" data-es="Duerme bajo las estrellas" data-fr="Dormez sous les étoiles">Sov under stjernene</p>
-      </div>
-    </div>
-    <div class="overnatting-cta reveal" style="transition-delay:80ms">
-      <a href="https://app.bookspot.io/widget/v3/dialog?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7" target="_blank" rel="noopener"
-         class="btn-accent"
-         data-no="Book opphald"
-         data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour">Book opphald</a>
-    </div>
-  </div>
-</section>
-
-<!-- FASILITETER -->
-<section id="fasiliteter" aria-label="Fasiliteter">
-  <div class="fasiliteter-inner">
-    <p class="section-label reveal" data-no="Fasiliteter" data-en="Facilities" data-de="Einrichtungen" data-es="Instalaciones" data-fr="Équipements">Fasiliteter</p>
-    <h2 class="section-h2 reveal" data-no="Kva vi tilbyr" data-en="What we offer" data-de="Unser Angebot" data-es="Lo que ofrecemos" data-fr="Ce que nous offrons">Kva vi tilbyr</h2>
-    <div class="facility-grid">
-      <div class="facility-item reveal">
-        <div class="facility-check" aria-hidden="true">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
-        </div>
-        <p data-no="Straum til bobil/campingvogn" data-en="Power for motorhomes &amp; caravans" data-de="Strom für Wohnmobile und Wohnwagen" data-es="Electricidad para autocaravanas y caravanas" data-fr="Électricité pour camping-cars et caravanes">Straum til bobil/campingvogn</p>
-      </div>
-      <div class="facility-item reveal" style="transition-delay:160ms">
-        <div class="facility-check" aria-hidden="true">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
-        </div>
-        <p data-no="Tømming av toalett" data-en="Chemical toilet disposal" data-de="Kassettentoiletten-Entsorgung" data-es="Vaciado de aguas residuales" data-fr="Vidange des eaux usées">Tømming av toalett</p>
-      </div>
-      <div class="facility-item reveal" style="transition-delay:240ms">
-        <div class="facility-check" aria-hidden="true">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
-        </div>
-        <p data-no="500 m frå Breheimsenteret" data-en="500 m from Breheimsenteret" data-de="500 m vom Breheimsenteret" data-es="500 m de Breheimsenteret" data-fr="500 m du Breheimsenteret">500 m frå Breheimsenteret</p>
-      </div>
-      <div class="facility-item reveal" style="transition-delay:320ms">
-        <div class="facility-check" aria-hidden="true">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
-        </div>
-        <p data-no="3 km frå Nigardsbreen parkering" data-en="3 km from Nigardsbreen car park" data-de="3 km vom Parkplatz Nigardsbreen" data-es="3 km del aparcamiento de Nigardsbreen" data-fr="3 km du parking de Nigardsbreen">3 km frå Nigardsbreen parkering</p>
-      </div>
-      <div class="facility-item reveal" style="transition-delay:400ms">
-        <div class="facility-check" aria-hidden="true">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
-        </div>
-        <p data-no="Nær Jostedalsbreen nasjonalpark" data-en="Near Jostedalsbreen National Park" data-de="Nahe dem Jostedalsbreen-Nationalpark" data-es="Cerca del Parque Nacional Jostedalsbreen" data-fr="Près du parc national du Jostedalsbreen">Nær Jostedalsbreen nasjonalpark</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERI -->
-<section id="galleri" aria-label="Biletegalleri">
-  <div class="gallery-inner">
-    <p class="section-label section-label-light reveal" data-no="Galleri" data-en="Gallery" data-de="Galerie" data-es="Galería" data-fr="Galerie">Galleri</p>
-    <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.5rem,4vw,2.1rem);color:var(--light);margin-bottom:28px;" class="reveal" data-no="Frå området" data-en="From the area" data-de="Aus der Region" data-es="De la zona" data-fr="De la région">Frå området</h2>
-    <div class="gallery-grid">
-      <div class="gallery-row">
-        <img class="reveal"
-             src="Bilder/nigardsbreen_jostedalen_sognefjord-scaled-2000x1200.jpg"
-             alt="Nigardsbreen — isbre og fjellnatur i Jostedalen"
-             loading="lazy">
-        <img class="reveal" style="transition-delay:80ms"
-             src="Bilder/images_652E2ikTUym8xNkARcbL_1593018440613_964419_541060729272822_352686100_o_1920x1080.webp"
-             alt="Nigardsbreen Camping — campingplass med fjell i bakgrunn"
-             loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BREHEIMSENTERET -->
-<section id="breheimsenteret" aria-label="Breheimsenteret">
-  <div class="bhs-inner">
-    <p class="section-label section-label-light reveal" data-no="Naboen vår" data-en="Our neighbour" data-de="Unser Nachbar" data-es="Nuestro vecino" data-fr="Notre voisin">Naboen vår</p>
-    <h2 class="section-h2-light reveal" data-no="Breheimsenteret" data-en="Breheimsenteret" data-de="Breheimsenteret" data-es="Breheimsenteret" data-fr="Breheimsenteret">Breheimsenteret</h2>
-    <div class="bhs-grid">
-      <div class="bhs-img-wrap reveal">
-        <img src="Bilder/72fd0060b958ab51cf17435480f85facfa279adc-1709x1169.avif"
-             alt="Breheimsenteret i Jostedalen"
-             class="bhs-img"
-             loading="lazy">
-      </div>
-      <div class="bhs-content">
-        <div class="bhs-text reveal">
-          <p data-no="500 meter frå campingplassen ligg Breheimsenteret — besøkssenter for Jostedalsbreen og Breheimen nasjonalparkar. Her finn du utstilling om isbreane og klimaet, kafé med utsikt mot Nigardsbreen, og utgangspunkt for alle dei store aktivitetane i dalen."
-             data-en="500 metres from the campsite lies Breheimsenteret — the visitor centre for Jostedalsbreen and Breheimen national parks. Here you'll find exhibitions about glaciers and climate, a café with views of Nigardsbreen, and the starting point for all major activities in the valley."
-             data-de="500 Meter vom Campingplatz liegt das Breheimsenteret — Besucherzentrum für den Jostedalsbreen- und Breheimen-Nationalpark. Hier finden Sie Ausstellungen über Gletscher und Klima, ein Café mit Blick auf den Nigardsbreen und den Ausgangspunkt für alle wichtigen Aktivitäten im Tal."
-             data-es="A 500 metros del camping se encuentra el Breheimsenteret — el centro de visitantes de los parques nacionales de Jostedalsbreen y Breheimen. Aquí encontrará exposiciones sobre glaciares y clima, una cafetería con vistas al Nigardsbreen y el punto de partida para todas las grandes actividades del valle."
-             data-fr="À 500 mètres du camping se trouve le Breheimsenteret — le centre d'accueil des parcs nationaux du Jostedalsbreen et de Breheimen. Vous y trouverez des expositions sur les glaciers et le climat, un café avec vue sur le Nigardsbreen et le point de départ pour toutes les grandes activités de la vallée.">500 meter frå campingplassen ligg Breheimsenteret — besøkssenter for Jostedalsbreen og Breheimen nasjonalparkar. Her finn du utstilling om isbreane og klimaet, kafé med utsikt mot Nigardsbreen, og utgangspunkt for alle dei store aktivitetane i dalen.</p>
-          <a href="https://www.jostedal.com" target="_blank" rel="noopener" class="bhs-link" data-no="Les meir og book turar på jostedal.com →" data-en="Read more and book tours at jostedal.com →" data-de="Mehr Informationen und Touren buchen auf jostedal.com →" data-es="Más información y reservas en jostedal.com →" data-fr="Plus d’informations et réservations sur jostedal.com →">Les meir og book turar på jostedal.com →</a>
-        </div>
-        <div class="bhs-list reveal" style="transition-delay:80ms">
-        <div class="bhs-item">
-          <div class="bhs-dot"></div>
-          <p data-no="Utstilling om isbre og klima" data-en="Glacier and climate exhibition" data-de="Ausstellung über Gletscher und Klima" data-es="Exposición sobre glaciares y clima" data-fr="Exposition sur les glaciers et le climat">Utstilling om isbre og klima</p>
-        </div>
-        <div class="bhs-item">
-          <div class="bhs-dot"></div>
-          <p data-no="Kafé med utsikt mot Nigardsbreen" data-en="Café with views of Nigardsbreen" data-de="Café mit Blick auf den Nigardsbreen" data-es="Cafetería con vistas al Nigardsbreen" data-fr="Café avec vue sur le Nigardsbreen">Kafé med utsikt mot Nigardsbreen</p>
-        </div>
-        <div class="bhs-item">
-          <div class="bhs-dot"></div>
-          <p data-no="Guideturer på breen" data-en="Guided glacier tours" data-de="Geführte Gletschertouren" data-es="Excursiones guiadas al glaciar" data-fr="Excursions guidées sur le glacier">Guideturer på breen</p>
-        </div>
-        <div class="bhs-item">
-          <div class="bhs-dot"></div>
-          <p data-no="Kajakkpadling og rafting" data-en="Kayaking and rafting" data-de="Kajak und Rafting" data-es="Kayak y rafting" data-fr="Kayak et rafting">Kajakkpadling og rafting</p>
-        </div>
-        <div class="bhs-item">
-          <div class="bhs-dot"></div>
-          <p data-no="Sesong frå 1. mai" data-en="Season from 1 May" data-de="Saison ab 1. Mai" data-es="Temporada desde el 1 de mayo" data-fr="Saison à partir du 1er mai">Sesong frå 1. mai</p>
-        </div>
-        </div><!-- /bhs-list -->
-      </div><!-- /bhs-content -->
-    </div><!-- /bhs-grid -->
-  </div><!-- /bhs-inner -->
-</section>
-
-<!-- KART OG KONTAKT -->
-<section id="kontakt" aria-label="Kart og kontakt">
-  <div class="kontakt-inner">
-    <p class="section-label reveal" data-no="Kart og kontakt" data-en="Map &amp; contact" data-de="Karte und Kontakt" data-es="Mapa y contacto" data-fr="Carte et contact">Kart og kontakt</p>
-    <h2 class="section-h2 reveal" data-no="Finn oss" data-en="Find us" data-de="So finden Sie uns" data-es="Encuéntranos" data-fr="Nous trouver">Finn oss</h2>
-    <div class="kontakt-grid">
-      <div class="reveal">
-        <iframe
-          src="https://maps.google.com/maps?q=61.6555148,7.2753751&z=16&t=k&output=embed"
-          width="100%" height="340"
-          style="border:0;border-radius:12px;display:block"
-          allowfullscreen loading="lazy"
-          title="Kart over Nigardsbreen Camping"></iframe>
-      </div>
-      <div class="contact-info reveal" style="transition-delay:80ms">
-        <div class="contact-row">
-          <span class="contact-icon" aria-hidden="true">📞</span>
-          <a href="tel:+4757683135">+47 57 68 31 35</a>
-        </div>
-        <div class="contact-row">
-          <span class="contact-icon" aria-hidden="true">✉</span>
-          <a href="mailto:camping@jostedal.com">camping@jostedal.com</a>
-        </div>
-        <div class="contact-row">
-          <span class="contact-icon" aria-hidden="true">📍</span>
-          <p>Mjølversgrendi 3, 6871 Jostedal</p>
-        </div>
-        <a href="https://app.bookspot.io/widget/v3/dialog?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7" target="_blank" rel="noopener"
-           class="btn-accent"
-           data-no="Book opphald"
-           data-en="Book your stay" data-de="Unterkunft buchen" data-es="Reservar estancia" data-fr="Réserver un séjour"
-           style="align-self:flex-start">Book opphald</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer id="footer">
   <p class="footer-logo">Nigardsbreen Camping</p>
   <div class="footer-contact">
@@ -1020,7 +814,6 @@
   <p class="footer-copy">Org.nr. 976 741 242</p>
   <p class="footer-copy footer-pv"><a href="personvern.html" data-no="Personvern" data-en="Privacy" data-de="Datenschutz">Personvern</a></p>
 </footer>
-
 
 <script>
   // LANGUAGE TOGGLE
@@ -1063,57 +856,6 @@
       document.body.style.overflow = '';
     });
   });
-
-  // SCROLL REVEAL
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (!prefersReduced) {
-    var revealObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(function(el) {
-      revealObserver.observe(el);
-    });
-  } else {
-    document.querySelectorAll('.reveal').forEach(function(el) {
-      el.classList.add('visible');
-    });
-  }
-
-  // COUNTER ANIMATION (nærleik-strip)
-  if (!prefersReduced) {
-    function animateCounter(el, target, duration) {
-      var start = performance.now();
-      function step(now) {
-        var elapsed = now - start;
-        var progress = Math.min(elapsed / duration, 1);
-        var ease = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.round(target * ease);
-        if (progress < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-
-    var counterDone = false;
-    var counterObserver = new IntersectionObserver(function(entries) {
-      if (entries[0].isIntersecting && !counterDone) {
-        counterDone = true;
-        document.querySelectorAll('.naerleik-num[data-count]').forEach(function(el) {
-          animateCounter(el, parseInt(el.dataset.count), 1100);
-        });
-        counterObserver.disconnect();
-      }
-    }, { threshold: 0.4 });
-
-    var strip = document.getElementById('naerleik');
-    if (strip) counterObserver.observe(strip);
-  }
 </script>
 </body>
 </html>
