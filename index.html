@@ -726,6 +726,85 @@
     @media (max-width: 767px) {
       .float-btn { display: flex; }
     }
+
+    /* ===== OPPGRADERING: roleg, fotodriven stil i tråd med Breheimsenteret-seksjonen ===== */
+    :root { --r: 14px; --sec: clamp(72px, 10vw, 128px); --ice: #cfe6e2; --shadow: 0 18px 40px -22px rgba(10,25,10,0.35); }
+    h2, .section-h2, .section-h2-light { letter-spacing: -0.015em; line-height: 1.08; }
+    .section-h2, .section-h2-light { font-size: clamp(2rem, 4.6vw, 3rem); margin-bottom: clamp(28px, 4vw, 44px); }
+    .section-label { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em; }
+
+    /* Felles seksjonsrytme og breidde */
+    #om-oss, #overnatting, #fasiliteter, #galleri, #breheimsenteret, #kontakt { padding: var(--sec) 24px; }
+    .om-oss-inner, .overnatting-inner, .fasiliteter-inner, .gallery-inner, .bhs-inner, .kontakt-inner { max-width: 1120px; }
+    #overnatting, #breheimsenteret, #footer { background: radial-gradient(120% 80% at 50% 0%, #22391f 0%, var(--primary) 60%); }
+    #galleri { background: #132313; }
+
+    /* Hero: ikkje heile skjermen, mjukare overgang nedover */
+    #hero { height: min(88vh, 860px); min-height: 560px; }
+    .hero-overlay { background: linear-gradient(180deg, rgba(8,18,8,0.30) 0%, rgba(8,18,8,0.38) 45%, rgba(8,18,8,0.72) 100%); }
+    .hero-h1 { font-size: clamp(2.7rem, 7.4vw, 5.2rem); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 22px; text-wrap: balance; }
+    .hero-sub { font-size: clamp(1rem, 2.4vw, 1.2rem); }
+    .scroll-hint { display: none; }
+    .btn-hero, .btn-accent, .btn-book-header, .mobile-menu .btn-menu-book { border-radius: 10px; box-shadow: 0 10px 24px -12px rgba(30,90,80,0.7); }
+
+    /* Avstandsstripa: tre likeverdige felt med tynne skiljelinjer */
+    #naerleik { padding: clamp(36px, 6vw, 56px) 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .naerleik-inner { max-width: 960px; gap: 0; }
+    .naerleik-item { padding: 18px 12px; width: 100%; }
+    .naerleik-item + .naerleik-item { border-top: 1px solid rgba(255,255,255,0.1); }
+    .naerleik-num { font-size: clamp(2.2rem, 5vw, 3rem); color: #fff; letter-spacing: -0.02em; }
+    .naerleik-label { color: rgba(255,255,255,0.7); }
+    @media (min-width: 580px) {
+      .naerleik-inner { gap: 0; }
+      .naerleik-item { flex: 1; }
+      .naerleik-item + .naerleik-item { border-top: 0; border-left: 1px solid rgba(255,255,255,0.12); }
+    }
+
+    /* Om campingen: større bilete, tekst utan strek */
+    .om-oss-img-wrap, .bhs-img-wrap { border-radius: var(--r); box-shadow: var(--shadow); }
+    .om-oss-text { border-left: 0; padding-left: 0; }
+    .om-oss-text p { font-size: clamp(1.08rem, 1.8vw, 1.25rem); line-height: 1.7; max-width: 34em; }
+    @media (min-width: 768px) {
+      .om-oss-grid { grid-template-columns: 1.15fr 0.85fr; gap: clamp(40px, 6vw, 80px); }
+      .om-oss-img { min-height: 440px; }
+      .bhs-img { min-height: 420px; }
+    }
+
+    /* Overnatting: tydelege kort med ikon */
+    .overnatting-inner > .section-label-light { text-align: center; }
+    .cards-grid { gap: 16px; }
+    .card { border-radius: var(--r); padding: clamp(26px, 3vw, 34px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), background 0.3s; }
+    .card:hover { background: rgba(255,255,255,0.09); transform: translateY(-3px); }
+    .card-ikon { width: 52px; height: 52px; border-radius: 12px; background: rgba(74,155,143,0.16); display: grid; place-items: center; margin-bottom: 20px; }
+    .card-ikon svg { width: 28px; height: 28px; stroke: var(--ice); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .card h3 { font-size: clamp(1.25rem, 2vw, 1.45rem); margin-bottom: 8px; }
+    .card p { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.55; }
+    @media (min-width: 600px) { .cards-grid { max-width: 1000px; } }
+
+    /* Fasilitetar: liste i eitt kort */
+    .fasiliteter-inner { max-width: 1000px; }
+    .facility-grid { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: clamp(24px, 4vw, 44px); gap: 18px 40px; box-shadow: var(--shadow); }
+    .facility-item p { font-size: 1.02rem; }
+    .facility-check { width: 26px; height: 26px; min-width: 26px; }
+
+    /* Galleri: større bilete, same radius */
+    .gallery-row { gap: 16px; }
+    .gallery-row img, .gallery-top { border-radius: var(--r); }
+    .gallery-row img { height: clamp(200px, 32vw, 440px); }
+    .gallery-note { color: rgba(255,255,255,0.6); }
+    @media (max-width: 599px) { .gallery-row { grid-template-columns: 1fr; } }
+
+    /* Kontakt: info i kort med linjeikon */
+    #kontakt iframe { border-radius: var(--r) !important; box-shadow: var(--shadow); min-height: 380px; }
+    .contact-info { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: clamp(24px, 4vw, 40px); box-shadow: var(--shadow); gap: 22px; align-self: start; }
+    .contact-icon { width: 40px; height: 40px; min-width: 40px; border-radius: 10px; background: rgba(74,155,143,0.12); display: grid; place-items: center; font-size: 0; }
+    .contact-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-row { align-items: center; gap: 16px; }
+    .contact-row a, .contact-row p { font-size: 1.05rem; font-weight: 500; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
   </style>
 </head>
 <body>
@@ -839,14 +918,17 @@
     <h2 class="section-h2-light reveal" data-no="Vel ditt opphald" data-en="Choose your stay" data-de="Wählen Sie Ihren Aufenthalt" data-es="Elige tu estancia" data-fr="Choisissez votre séjour">Vel ditt opphald</h2>
     <div class="cards-grid">
       <div class="card reveal">
+        <div class="card-ikon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 22V10a2 2 0 0 1 2-2h15l5 6h2a2 2 0 0 1 2 2v6"/><path d="M3 22h26"/><circle cx="9" cy="23.5" r="2.5"/><circle cx="23" cy="23.5" r="2.5"/><path d="M7 12h5v4H7zM15 12h5"/></svg></div>
         <h3 data-no="Bobilplass" data-en="Motorhome" data-de="Wohnmobilstellplatz" data-es="Autocaravana" data-fr="Camping-car">Bobilplass</h3>
         <p data-no="Straum og tømmestasjon tilgjengeleg" data-en="Power and dump station available" data-de="Strom und Entsorgungsstation verfügbar" data-es="Electricidad y estación de vaciado disponibles" data-fr="Électricité et station de vidange disponibles">Straum og tømmestasjon tilgjengeleg</p>
       </div>
       <div class="card reveal" style="transition-delay:160ms">
+        <div class="card-ikon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="4" y="9" width="20" height="13" rx="3"/><path d="M24 19h5M10 13h6"/><circle cx="12" cy="23.5" r="2.5"/></svg></div>
         <h3 data-no="Vognplass" data-en="Caravan" data-de="Wohnwagenstellplatz" data-es="Caravana" data-fr="Caravane">Vognplass</h3>
         <p data-no="God plass, straum inkludert" data-en="Spacious pitches with power" data-de="Große Stellplätze mit Strom" data-es="Parcelas amplias con electricidad" data-fr="Grands emplacements avec électricité">God plass, straum inkludert</p>
       </div>
       <div class="card reveal" style="transition-delay:240ms">
+        <div class="card-ikon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 25L16 6l12 19z"/><path d="M16 6v19M12.5 25L16 18l3.5 7"/><path d="M2 25h28"/></svg></div>
         <h3 data-no="Teltplass" data-en="Tent" data-de="Zeltplatz" data-es="Parcela de tienda" data-fr="Emplacement tente">Teltplass</h3>
         <p data-no="Sov under stjernene" data-en="Sleep under the stars" data-de="Schlafen Sie unter den Sternen" data-es="Duerme bajo las estrellas" data-fr="Dormez sous les étoiles">Sov under stjernene</p>
       </div>
@@ -984,15 +1066,15 @@
       </div>
       <div class="contact-info reveal" style="transition-delay:80ms">
         <div class="contact-row">
-          <span class="contact-icon" aria-hidden="true">📞</span>
+          <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
           <a href="tel:+4757683135">+47 57 68 31 35</a>
         </div>
         <div class="contact-row">
-          <span class="contact-icon" aria-hidden="true">✉</span>
+          <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
           <a href="mailto:camping@jostedal.com">camping@jostedal.com</a>
         </div>
         <div class="contact-row">
-          <span class="contact-icon" aria-hidden="true">📍</span>
+          <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
           <p>Mjølversgrendi 3, 6871 Jostedal</p>
         </div>
         <a href="https://app.bookspot.io/widget/v3/dialog?key=a64314fdd29d819bcc086638f7c191f91ea2078f522a0c0da90955e6af912cc7" target="_blank" rel="noopener"
