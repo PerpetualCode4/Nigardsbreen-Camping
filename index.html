@@ -726,6 +726,14 @@
     @media (max-width: 767px) {
       .float-btn { display: flex; }
     }
+
+    /* Kart: blir først lasta når besøkjaren trykker «Vis kart» (personvern) */
+    .kart-plass { min-height: 340px; border-radius: 12px; background: linear-gradient(160deg, #e6efe9, #d5e4dc); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 28px; text-align: center; }
+    .kart-tekst { max-width: 30em; font-size: 0.95rem; color: var(--text); line-height: 1.55; }
+    .kart-knapp { border: 0; cursor: pointer; font-family: inherit; }
+    .kart-lenke { font-size: 0.9rem; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+    .kart-plass iframe { width: 100%; height: 340px; border: 0; border-radius: 12px; display: block; }
+    .kart-plass.lasta { padding: 0; background: none; border: 0; }
   </style>
 </head>
 <body>
@@ -975,12 +983,11 @@
     <h2 class="section-h2 reveal" data-no="Finn oss" data-en="Find us" data-de="So finden Sie uns" data-es="Encuéntranos" data-fr="Nous trouver">Finn oss</h2>
     <div class="kontakt-grid">
       <div class="reveal">
-        <iframe
-          src="https://maps.google.com/maps?q=61.6555148,7.2753751&z=16&t=k&output=embed"
-          width="100%" height="340"
-          style="border:0;border-radius:12px;display:block"
-          allowfullscreen loading="lazy"
-          title="Kart over Nigardsbreen Camping"></iframe>
+        <div class="kart-plass" id="kart-plass">
+          <p class="kart-tekst" data-no="Kartet kjem frå Google Maps. Når du opnar det, får Google mellom anna IP-adressa di." data-en="The map is provided by Google Maps. When you open it, Google receives information such as your IP address." data-de="Die Karte stammt von Google Maps. Wenn Sie sie öffnen, erhält Google unter anderem Ihre IP-Adresse." data-es="El mapa es de Google Maps. Al abrirlo, Google recibe datos como tu dirección IP." data-fr="La carte est fournie par Google Maps. En l'ouvrant, Google reçoit notamment votre adresse IP.">Kartet kjem frå Google Maps. Når du opnar det, får Google mellom anna IP-adressa di.</p>
+          <button type="button" class="btn-accent kart-knapp" id="vis-kart" data-no="Vis kart" data-en="Show map" data-de="Karte anzeigen" data-es="Mostrar mapa" data-fr="Afficher la carte">Vis kart</button>
+          <a class="kart-lenke" href="https://maps.google.com/?q=61.6555148,7.2753751" target="_blank" rel="noopener" data-no="Opne i Google Maps" data-en="Open in Google Maps" data-de="In Google Maps öffnen" data-es="Abrir en Google Maps" data-fr="Ouvrir dans Google Maps">Opne i Google Maps</a>
+        </div>
       </div>
       <div class="contact-info reveal" style="transition-delay:80ms">
         <div class="contact-row">
@@ -1114,6 +1121,13 @@
     var strip = document.getElementById('naerleik');
     if (strip) counterObserver.observe(strip);
   }
+
+// Google Maps blir berre lasta når besøkjaren sjølv vel det
+document.getElementById('vis-kart').addEventListener('click', function () {
+  var plass = document.getElementById('kart-plass');
+  plass.classList.add('lasta');
+  plass.innerHTML = '<iframe src="https://maps.google.com/maps?q=61.6555148,7.2753751&z=16&t=k&output=embed" allowfullscreen title="Kart over Nigardsbreen Camping"></iframe>';
+});
 </script>
 </body>
 </html>
